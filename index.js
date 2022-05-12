@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const generateReadme = require('./page-template');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -44,7 +45,7 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'description',
-        message: 'Please provide a detailed description of your project',
+        message: 'Please provide a detailed description of your project.',
         validate: descriptionInput => {
           if (descriptionInput) {
             return true;
@@ -99,21 +100,17 @@ const promptUser = () => {
           }
         }
       }
-    ]);
-};
 
-promptUser()
-  .then(promptProject)
-  .then(pageHTML => {
-    return writeFile(pageHTML);
-  })
-  .then(writeFileResponse => {
-    console.log(writeFileResponse);
-    return copyFile();
-  })
-  .then(copyFileResponse => {
-    console.log(copyFileResponse);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+    ])
+      .then(function (data){
+        console.log(data);
+        //convert data into a string(readme)
+        let result = generateReadme(data);
+        console.log(result);
+
+
+        //write file
+      })
+};
+promptUser();
+
