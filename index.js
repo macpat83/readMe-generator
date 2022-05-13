@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const generateReadme = require('./page-template');
+const fs = require('fs');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -110,6 +111,10 @@ const promptUser = () => {
 
 
         //write file
+        fs.writeFile("readme.md", result, function(err){
+          if (err) throw err;
+          console.log("it worked");
+        })
       })
 };
 promptUser();
