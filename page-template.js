@@ -1,11 +1,22 @@
 function generateReadme (data) {
-    return `# ${data.title}
+    return `
+    
+# ${data.title}
 
 ## Table of Contents
+* [Project Links](#project)
+* [Description](#description)
+* [Built With](#built)
+* [Future Development](#future)
+* [Contributors](#contributors)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
+
+
+
+
 
 
 ## Project Links
@@ -13,27 +24,58 @@ function generateReadme (data) {
 * Repo Link ${data.repolink}
 
 
+
+
+
+
 ## Description
 ${data.description}
+
+
+
 
 
 ## Built With
 ${data.languages}
 
 
+
+
+
 ## Future Development
 ${data.development}
+
+
 
 
 ## Contributors
 ${data.contributors}
 
 
-${data.img}
+
+
+
+${data.image}
+
+
 
 
 ## Installation
 
+
+
+
+## Usage
+
+
+
+
+## Credits
+
+
+
+
+## License
     
 `
 }
