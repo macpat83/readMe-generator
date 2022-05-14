@@ -1,6 +1,6 @@
 
     
-# readme
+## readme
 
 ## Table of Contents
 * [Project Links](#project)
@@ -14,37 +14,72 @@
 * [License](#license)
 
 
+
+
+
+
 ## Project Links
 * Deployed Link readme.com
 * Repo Link readme.github
+
+
+
+
 
 
 ## Description
 it is a readme
 
 
+
+
+
 ## Built With
-JavaScript,HTML,ES6,Node
+* JavaScript
+* CSS
+* ES6
+* jQuery
+* Node
+;
+
+
+
+
+
+
 
 
 ## Future Development
-it is a readme
+none
+
+
 
 
 ## Contributors
 mac
 
 
-undefined
+
+
+
+image
+
+
 
 
 ## Installation
 
 
+
+
 ## Usage
 
 
+
+
 ## Credits
+
+
 
 
 ## License

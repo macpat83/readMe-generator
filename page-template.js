@@ -1,7 +1,20 @@
+function bullet (data) {
+    console.log(data)
+    var bulletArr = data;
+    var bulletList = "";
+            for (var i = 0; i < bulletArr.length; i++) {
+                bulletList += "* " + bulletArr[i] + "\n" ;
+            
+                    
+        
+        }
+        return bulletList;
+    }
+
 function generateReadme (data) {
     return `
     
-# ${data.title}
+## ${data.title}
 
 ## Table of Contents
 * [Project Links](#project)
@@ -36,7 +49,10 @@ ${data.description}
 
 
 ## Built With
-${data.languages}
+${bullet(data.languages)}
+
+
+
 
 
 
@@ -49,7 +65,7 @@ ${data.development}
 
 
 ## Contributors
-${data.contributors}
+${bullet(data.contributors)}
 
 
 
