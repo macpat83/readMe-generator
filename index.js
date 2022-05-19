@@ -19,6 +19,18 @@ const promptUser = () => {
       },
       {
         type: 'input',
+        name: "install",
+        message: "What command should be run to install dependencies?",
+        default: "npm i"
+      },
+      {
+        type: 'input',
+        name: "test",
+        message: "What command should be run to run tests?",
+        default: "npm test"
+      },
+      {
+        type: 'input',
         name: 'deployedlink',
         message: 'Please enter your deployed project link.',
         validate: deployedlinkInput => {
@@ -100,7 +112,19 @@ const promptUser = () => {
             return false;
           }
         }
-      }
+      },
+
+      {
+        type: 'input',
+        name: 'credits',
+        message: 'Please provide any necessary credits to the project',
+      },
+      {
+        type: "list",
+        name: "license",
+        message: "What kind of license should your project have?",
+        choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "MPL 2.0", "None"]
+      },
 
     ])
       .then(function (data){
@@ -113,7 +137,6 @@ const promptUser = () => {
         //write file
         fs.writeFile("readme.md", result, function(err){
           if (err) throw err;
-          console.log("it worked");
         })
       })
 };
