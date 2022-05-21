@@ -33,42 +33,38 @@ function generateReadme (data) {
     
 ## ${data.title}
 
-${
-    data.license !== "None"
-      ? `[![License ${
-          data.license
-        }](https://img.shields.io/badge/License-${data.license.replace(
-          " ",
-          "%20"
-        )}-blue.svg)](${getLicenseUrl(data.license)})`
-      : ""
-  }
+
+
 
 ## Table of Contents
-* [Project Links](#project)
-* [Description](#description)
-* [Built With](#built)
-* [Future Development](#future)
-* [Contributors](#contributors)
+
+
 * [Installation](#installation)
-* [Usage](#usage)
+* [Test](#test)
+* [Project Links](#project-links)
+* [Description](#description)
+* [Built With](#built-with)
+* [Future Development](#future-development)
+* [Contributors](#contributors)
 * [Credits](#credits)
 * [License](#license)
 
 
+## Installation
 
-##Installation
+${data.install}
 
 
 
+## Test
 
-## Usage
-
+${data.test}
 
 
 ## Project Links
-* Deployed Link ${data.deployedlink}
-* Repo Link ${data.repolink}
+
+* Deployed Link: ${data.deployedlink}
+* Repo Link: ${data.repolink}
 
 
 
@@ -76,6 +72,7 @@ ${
 
 
 ## Description
+
 ${data.description}
 
 
@@ -83,6 +80,7 @@ ${data.description}
 
 
 ## Built With
+
 ${bullet(data.languages)}
 
 
@@ -93,28 +91,37 @@ ${bullet(data.languages)}
 
 
 ## Future Development
+
 ${data.development}
 
 
 
 
 ## Contributors
-${bullet(data.contributors)}
+
+${data.contributors}
 
 
 
 
 
-${data.image}
+![screenshot](${data.image})
 
 
 
 ## Credits
 
+${data.credits}
 
 
 
 ## License
+
+${
+    data.license !== "None"
+      ? `This project is licensed under the ${data.license} license.`
+      : "No License"
+  }
     
 `
 }
